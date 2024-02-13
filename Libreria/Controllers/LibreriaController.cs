@@ -16,12 +16,14 @@ namespace Libreria.Controllers
             _context = context;
         }
 
+        //metodo para obtener todos los libros de base de datos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Libro>>> GetLibros()
         {
             return await _context.Libros.ToListAsync();
         }
 
+        //metodo para agregar un nuevo libro
         [HttpPost]
         public async Task<ActionResult<Libro>> AddLibro(Libro libro)
         {
@@ -30,6 +32,7 @@ namespace Libreria.Controllers
             return Ok(libro);
         }
 
+        //metodo para eliminar un libro
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteLibro(int id)
         {
@@ -45,6 +48,7 @@ namespace Libreria.Controllers
             return NoContent();
         }
 
+        //metodo para actualizar informacion de un libro
         [HttpPut]
         public async Task<ActionResult<Libro>> UpdateLibro(int id, Libro libro)
         {

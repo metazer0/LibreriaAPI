@@ -8,6 +8,8 @@ namespace Libreria.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
                
+        
+        
         }
 
         public DbSet<Libro> Libros { get; set; }
