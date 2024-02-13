@@ -10,7 +10,7 @@ namespace Libreria.Data
                
         }
 
-        DbSet<Libro> Libros { get; set; }
-        DbSet<Autor> Autores { get; set; }
+        public DbSet<Libro> Libros { get; set; }
+        public DbSet<Autor> Autores { get; set; }
     }
 }
